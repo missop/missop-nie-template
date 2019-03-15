@@ -1,0 +1,19 @@
+<div class="vediolive">
+    <h4 class="title">
+        <span class="zbj">直播间</span>
+        <span class="livetime">点击上方主播头像切换直播间</span>
+        <div class="qrcode">
+            <div class="qrcodechildren book code-com" v-if="danmushowstate" @click="danmushow = !danmushow" v-cloak>{{danmushow == true ?  "关闭" : "开启"}}弹幕</div>
+            <!--<div class="qrcode_block" id="qrcode1">
+                <img src="../../img/mobile.png" alt='网易游戏直播'/>
+            </div>-->
+        </div>
+    </h4>
+    <div class="liveandbar">
+        <div class="live" id="Jlinve">
+            
+        </div>
+        <div class="danmu" v-show="danmushow">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+@import "_reset.less";
+
+body,
+html {
+  font-family: "microsoft yahei";
+}
+
+body {
+  min-width: 1260px;
+}
+
+.wrap {
+  overflow: hidden;
+  min-width: 1260px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 1200px;
+  a:focus {
+    outline: none;
+  }
+}
+
+h1 {
+  font-size: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.bluegreen {
+  color: #3ce9e7;
+}
+
+.centerbox {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  // logo
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  width: 100%;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+//头部
+#NIE-topBar {
+  width: 100%;
+  min-width: 1200px !important;
+  height: 55px;
+  z-index: 997 !important;
+  #NIE-topBar-main {
+    z-index: 997 !important;
+  }
+}
+
+/*********底部版权*********/
+#NIE-copyRight {
+  width: 100%;
+  min-width: 1200px;
+  position: relative;
+  color: #787878;
+  #ncp-l1 {
+    color: #787878;
+  }
+  #NIE-copyRight-corp {
+    padding: 30px 0 !important;
+  }
+  a,
+  p,
+  span {
+    color: #787878;
+  }
+  #ncp-l3 {
+    display: inline-block;
+  }
+}
+
+/***************分享***************/
+#NIE-share {
+  display: none !important;
+  z-index: 999;
+  position: absolute;
+  top: -38px;
+  //right: 560px;
+  left: 50%;
+  margin-left: -100px;
+  padding-top: 10px;
+  width: 220px;
+  text-align: center;
+}
+
+#NIE-share .NIE-share-txt {
+  font-size: 0;
+  height: 24px;
+  line-height: 24px;
+}
+
+#NIE-share .NIE-share-iconBtn a {
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #b7c9e8;
+}
+
+#NIE-share .NIE-share-iconBtn a:hover {
+  color: #727e93;
+}
+
+//弹层
+.pop {
+  z-index: -1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  &.on {
+    z-index: 10000;
+  }
+  .close {
+    width: 35px;
+    height: 35px;
+    background: url(../img/close.png) no-repeat;
+    position: absolute;
+    top: 26px;
+    right: -22px;
+    cursor: pointer;
+    .transition(all .5s);
+    &:hover {
+      .transform(rotate(180deg));
+    }
+  }
+}
+
+.Layer {
+  opacity: 0;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, .7);
+  .transition(all .5s);
+  &.on {
+    opacity: 1;
+    z-index: 9999;
+  }
+}
+
+//文字外发光
+.txt-bright(@originColor,@shadowColor) {
+  .text-shadow(0 0 0 @originColor, 0 0 0 @originColor, 0 0 0 @originColor, 0 0 20px @shadowColor, 0 0 20px @shadowColor, 0 0 20px @shadowColor, 0 0 20px @shadowColor, 0 0 20px @shadowColor;)
+}
+

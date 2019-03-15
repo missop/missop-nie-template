@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-index='1'>
+
+<head>
+    <link rel="import" href="inline/seo.html?__inline">
+
+    <link rel="stylesheet" href="https://nie.res.netease.com/comm/js/nie/ref/css/swiper.3.4.1.css">
+    <link rel="stylesheet" type="text/css" href="css/index.less" />
+    <script type="text/javascript">
+        function params(u, p){
+            var m = new RegExp("(?:&|/?)"+p+"=([^&$]+)").exec(u);
+            return m ? m[1] : '';
+        }
+        !function(){
+            if(/iphone|android|ipod/i.test(navigator.userAgent.toLowerCase()) == false && params(location.search, "from") != "desktop"){
+                location.href = 'PC地址';
+            }
+        }();
+    </script><!--ignore-->
+</head>
+
+<body>
+    <link rel="import" href="inline/share.html?__inline">
+    <div id="forhorview"><p>推荐使用竖屏浏览哦~</p></div>
+    <div class="clr container">
+        <link rel="import" href="inline/top_bar.html?__inline" />
+        <div class="slogan"></div>
+        <a href="javascript:;" class="video-play" data-src=""></a>
+    </div>
+    <link rel="import" href="inline/site_bottom.html?__inline" />
+    <div class="Layer"></div>
+    <!-- 视频弹窗 -->
+    <div id="videoPop">
+        <a href="javascript:;" class="video-close" title="关闭"></a>
+        <div id="video-box"></div>
+    </div>
+
+    <!-- zepto mix NIE (最新版本）-->
+    <script charset="utf-8" src="https://nie.res.netease.com/comm/js/zepto(mixNIE).last.js"></script>
+    <script src="https://nie.res.netease.com/comm/js/nie/ref/swiper.3.4.1.js"></script>
+    <script charset="utf-8" src="js/common.js"></script>
+    <script charset="utf-8" src="js/share.js"></script>
+    <script charset="utf-8" src="js/index.js"></script>
+</body>
+
+</html>

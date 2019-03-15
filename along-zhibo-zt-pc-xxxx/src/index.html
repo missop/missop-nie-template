@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="import" href="inline/seo.html?__inline" />
+
+		<link rel="stylesheet" href="css/index.less">
+		<link rel="stylesheet" href="css/popalert.less">
+		<link href="css/chatbar.less" rel="stylesheet">
+
+		<script data-fixed="true">
+            // 强制跳转到http
+            var href = window.location.href,
+                ishttps = href.substr(0, 5) == 'https';
+            if (ishttps) {
+                window.location.href=href.replace('https', 'http');
+            }
+			! function() {
+				function params(u, p) {
+					var m = new RegExp("(?:&|/?)" + p + "=([^&$]+)").exec(u);
+					return m ? m[1] : '';
+				}
+				if(/iphone|android|ipod/i.test(navigator.userAgent.toLowerCase()) == true && params(location.search, "from") != "mobile") {
+					location.href = 'void';
+				}
+			}();
+		</script>
+		<!--ignore-->
+	</head>
+
+	<body>
+		<!--顶条-->
+		<div id="NIE-topBar"></div>
+		<!--外框-->
+		<div class="wrap">
+			<link rel="import" href="inline/share.html?__inline" />
+
+			<!-- 主体 -->
+			<div class="head">
+
+			</div>
+			<div class="part1 js_part">
+				<div class="centerbox">
+					<div class="main-box">
+						<a href="javascript:;" class="zb-btn scan" title="前往直播间" target="_blank">前往直播间</a>
+						<div class="zb-btn" title="邀请好友围观">
+							邀请好友围观
+							<div id="NIE-share"></div>
+						</div>
+						<div id="main" v-cloak>
+							<link rel="import" href="inline/chatbar_index_new.html?__inline">
+							<link rel="import" href="inline/public/compopwin.html?__inline">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--底条-->
+			<div class="footer">
+				<div id="NIE-copyRight"></div>
+			</div>
+		</div>
+		<!-- JS放底部-->
+		<script charset="utf-8" src="https://nie.res.netease.com/comm/js/jquery(mixNIE).1.11.js"></script>
+		<!--直播嵌套部分的js-->
+		<script type="text/javascript" src="js/lib/vue.js"></script>
+		<script  src="https://nie.res.netease.com/nie/qt/xylive/sv/ethdata.js"></script>
+		<script type="text/javascript" src="js/app/base.js"></script>
+		<script type="text/javascript" src="js/app/chatbar.js"></script>
+		<!--直播嵌套部分的js end-->
+		<script charset="utf-8" type="text/javascript" src="js/app/common.js"></script>
+		<script charset="utf-8" type="text/javascript" src="js/app/share.js"></script>
+		<script charset="utf-8" type="text/javascript" src="js/app/index.js"></script>
+	</body>
+
+</html>

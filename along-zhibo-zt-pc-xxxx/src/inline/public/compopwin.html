@@ -1,0 +1,48 @@
+<!--普通评论选择-->
+<div class="popwin" :class="{'popwinshow':personalinfo.show}" id="personalinfo" >
+    <h4>赶紧给自己起个名字</h4>
+    <a class="closepop" @click="closepop('personalinfo')"></a>
+    <ul class="headImagelist">
+        <li v-for="index in personalinfo.headimgNumber.len">
+            <img :alt="product + '头像'" :src="personalinfo.headimgNumber.init+(index)+'.'+personalinfo.headimgNumber.type" :class="{'on' : personalinfo.selectedheadming == personalinfo.headimgNumber.init+(index)+'.'+personalinfo.headimgNumber.type}" @click=" personalinfo.selectedheadming = personalinfo.headimgNumber.init+(index)+'.'+personalinfo.headimgNumber.type"/>
+        </li>
+    </ul>
+    <div class="input">
+        <input maxlength="11" placeholder="填写服务器" id="inputnickserver" v-model="personalinfo.server"  v-if="serverstate"/>
+        <input maxlength="8" placeholder="填写角色昵称" id="inputnickroleid" v-model="personalinfo.roleId" v-if="serverstate"/>
+        <input maxlength="8" id="inputnickname" :class="{'on':personalinfo.nikename.length>0}" v-model="personalinfo.nikename" />
+        <input maxlength="11" id="inputnickphone" :class="{'on':personalinfo.nikephone.length>0}" v-model="personalinfo.nikephone"  v-if="phonestate"/>
+        <p class="inputerror">{{personalinfo.errmsg}}</p>
+    </div>
+    <a class="submit" id="submitnickname" @click="submitnickname('personalinfo')">提 交</a>
+</div>
+
+<!--话题互动-->
+<div class="popwin" :class="{'popwinshow':answerquestion.show}" id="answerquestion">
+    <h4># {{answerquestion.title}} #</h4>
+    <a class="closepop" @click="closepop('answerquestion')"></a>
+    <p class="question">{{answerquestion.desc}}</p>
+    <div class="input placeholderinput">
+        <!--<p class="ph">参与互动，最多输入144个字</p>-->
+        <textarea placeholder="" maxlength="144" v-model="answerquestion.content" id="textarea3"></textarea>
+        <p class="inputerror">{{answerquestion.error}}</p>
+    </div>
+    <a class="submit" :class="{'forbid':countdown != 0}" @click="submitactive()">提 交{{countdown == 0 ? "" : '('+countdown+'s)'}}</a>
+</div>
+
+<!--图册显示-->
+<div class="imgpop" :class="{'imgpopshow':showimg.show}" id="showimg" >
+    <a class="closepop" @click="closepop('showimg')"></a>
+    <div id="imglistcontainer">
+    </div>
+</div>
+
+<!--视频显示-->
+<div class="videopop" :class="{'videopopshow':videopop.show}" id="showvideo">
+    <a class="closepop1" @click="closepop('videopop')"></a>
+    <div class="videoshow">
+        <video :src="videosrc" controls="controls" autoplay="autoplay" id="videolive"></video>
+    </div>
+</div>
+<div class="mask" :class="{'popwinshow':maskshow}"></div>
+<!-- 以上是通用必须的弹窗 -->

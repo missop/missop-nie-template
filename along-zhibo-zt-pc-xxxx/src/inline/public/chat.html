@@ -1,0 +1,12 @@
+<div class="c_content c_content_1">
+    <ul class="c_list">
+        <li class="c_chatitem" v-for="(item,index) in comdata" transition="stagger" stagger="200">
+            <img :src="item.headImage " :alt="product + '直播'" class="headingimg" />
+            <p class="username">{{(item.author == "" || item.author == undefined) ? "游客" : item.author}}</p>
+                <div class="chatitem_right">
+                    <p class="text" v-html="'<i></i>'+replacehtml(item.content)"></p>
+                </div>
+            </li>
+    </ul>
+</div>
+<link rel="import" href="chatinput.html?__inline">

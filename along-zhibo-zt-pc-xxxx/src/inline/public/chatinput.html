@@ -1,0 +1,21 @@
+
+<div class="c_input">
+    <div class="emoji">
+        <!--<a class="sendemoji" @click="startedit('emoji')"></a>-->
+        <a class="sendgift" @click="startedit('gift')"></a>
+        <ul class="emojilist" v-show="showlist.emoji">
+            <li v-for="emoji in emojilist" @click="sentlistmsg(emoji.val)" track-by="$index" >
+                <img :src="emoji.addr">
+            </li>
+        </ul>
+        <ul class="giftlist" v-show="showlist.gift">
+            <li v-for="item in giftcontent" @click="startgift(item.val)">
+                <img :src="item.addr">
+            </li>
+        </ul>
+    </div>
+    <div class="input placeholderinput">
+        <textarea v-model="inputmessage" maxlength="144" placeholder="" id="textarea1" :class="{'on':inputmessage.length>0}"></textarea>
+        <a @click="startedit('submit')" :class="{'forbid':countdown != 0}">发送<br>{{countdown == 0 ? "" : '('+countdown+'s)'}}</a>
+    </div>
+</div>

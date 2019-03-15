@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="import" href="inline/seo.html?__inline" />
+		<link rel="stylesheet" href="https://nie.res.netease.com/comm/js/nie/ref/css/swiper.3.4.1.css">
+		<link rel="stylesheet" href="css/index.less">
+		<link rel="stylesheet" href="css/popalert.less">
+		<script data-fixed="true">
+			! function() {
+				function params(u, p) {
+					var m = new RegExp("(?:&|/?)" + p + "=([^&$]+)").exec(u);
+					return m ? m[1] : '';
+				}
+				if(/iphone|android|ipod/i.test(navigator.userAgent.toLowerCase()) == true && params(location.search, "from") != "mobile") {
+					location.href = 'PC地址';
+				}
+			}();
+		</script>
+		<!--ignore-->
+	</head>
+
+	<body>
+		<!--顶条-->
+		<div id="NIE-topBar"></div>
+		<!--外框-->
+		<div class="wrap">
+			<link rel="import" href="inline/share.html?__inline" />
+
+			<!-- 主体 -->
+			<div class="head">
+				<div class="centerbox">
+					<a href="//zm.163.com/index.html" class="logo" target="_blank"><img
+							src="https://webinput.nie.netease.com/img/zm/logo.png/200" alt="logo" title="镇魔曲"></a>
+					<ul class="out">
+
+					</ul>
+				</div>
+			</div>
+			<div class="part1 js_part">
+				<div class="centerbox">
+
+				</div>
+			</div>
+			<div class="part2 js_part">
+				<div class="centerbox">
+				</div>
+			</div>
+			<div class="part3 js_part">
+				<div class="centerbox">
+
+				</div>
+			</div>
+
+			<!--底条-->
+			<div class="footer">
+				<!--分享-->
+				<div id="NIE-share"></div>
+				<div id="NIE-copyRight"></div>
+			</div>
+		</div>
+		<!-- 视频弹窗 -->
+		<div class="video_pop" id="videoPop">
+			<a class="video-close" href="javascript:;" title="关闭"></a>
+			<div id="video-box"></div>
+		</div>
+
+		<div class="zzc"></div>
+		<!-- JS放底部-->
+		<script charset="utf-8" src="https://nie.res.netease.com/comm/js/jquery(mixNIE).1.11.js"></script>
+		<script src="https://nie.res.netease.com/comm/js/nie/ref/swiper.3.4.1.js"></script>
+		<script charset="utf-8" type="text/javascript" src="js/common.js"></script>
+		<script charset="utf-8" type="text/javascript" src="js/share.js"></script>
+		<script charset="utf-8" type="text/javascript" src="js/index.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,480 @@
+@import "_reset.less";
+
+.topbox {
+  width: 100%;
+  height: 1.23rem;
+  background: url(../img/top-bg.png) top center no-repeat;
+  background-size: 100% 100%;
+  &.fixed {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+  .icon {
+    width: 1.02rem;
+    height: 1.02rem;
+    margin: .1rem 0 0 .15rem;
+    float: left;
+    font-size: 0;
+    text-indent: -100rem;
+    background: url(../img/icon.png) no-repeat;
+    background-size: 100% 100%;
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .game_name {
+    float: left;
+    margin: .2rem 0 0 .2rem;
+    h2 {
+      font-size: .3rem;
+      line-height: .36rem;
+      color: #2f4a70;
+      font-weight: bold;
+      margin-bottom: .1rem;
+    }
+    p {
+      font-size: .24rem;
+      color: #2f4a70;
+      line-height: .28rem;
+    }
+  }
+  .btn {
+    float: right;
+    width: 1.79rem;
+    height: .69rem;
+    line-height: .69rem;
+    color: #896600;
+    font-size: .24rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .26rem .12rem 0 0;
+    background: url(../img/download.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.mask {
+  transition: opacity 0.3s ease-in-out 0s;
+  -moz-transition: opacity 0.3s ease-in-out 0s;
+  -webkit-transition: opacity 0.3s ease-in-out 0s;
+  -o-transition: opacity 0.3s ease-in-out 0s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  opacity: 0;
+  z-index: 999;
+  &.beshow {
+    .box();
+    .box-align(center);
+    .box-pack(center);
+  }
+  &.show {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "bottomfont";
+  src: url('bottomfont.eot'); /* IE9*/
+  src: url('bottomfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('bottomfont.woff') format('woff'), /* chrome, firefox */ url('bottomfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('bottomfont.svg#bottomfont') format('svg'); /* iOS 4.1- */
+}
+
+.bottomfont {
+  font-family: bottomfont !important;
+  font-size: .32rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.site_bottom {
+  width: 100%;
+  box-sizing: border-box;
+  background: #191724;
+  border-bottom-color: #fff;
+  position: relative;
+  // float: left;
+  &.fixed {
+    padding-bottom: .89rem;
+    .btn-toTop {
+      bottom: 0.26+.89rem;
+    }
+  }
+  p, a, h3 {
+    color: #fff;
+  }
+  a {
+    font-size: .26rem;
+  }
+  .button {
+
+    height: 0.7rem;
+    width: 3.35rem;
+    margin: 0 0.2rem;
+    font-size: 0.3rem;
+    line-height: 0.7rem;
+    border-radius: 0.1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffc324;
+    display: none;
+    &.show {
+      display: block;
+    }
+
+  }
+
+  ul {
+    .box();
+    .box-orient(horizontal);
+    .box-pack(justify);
+    // padding: .56rem 0.24rem 0;
+    padding: .56rem 0.2rem 0;
+    // margin-bottom:0.56rem;
+    li {
+      border-color: #fff;
+      a {
+        margin-right: .34rem;
+        .box();
+        .box-orient(horizontal);
+        height: 0.6rem;
+        line-height: 0.6rem;
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+        i {
+          display: block;
+          font-size: 0.4rem;
+          width: 0.6rem;
+          height: 0.6rem;
+          margin-right: 0.1rem;
+          line-height: 0.6rem;
+          box-sizing: border-box;
+          border: 1px solid #fff;
+          color: #fff;
+          text-align: center;
+        }
+        span {
+          font-size: 0.28rem;
+          display: block;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .site_tel {
+    color: #fff;
+    margin-bottom: 0.32rem;
+
+    h3 {
+      .box();
+      .box-pack(center);
+      .box-align(center);
+      .box-orient(horizontal);
+
+      i {
+
+        margin-right: 0.1rem;
+        display: block;
+      }
+      span {
+        font-size: 0.28rem;
+        font-weight: normal;
+        line-height: 0.4rem;
+        display: block;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .icon_tel {
+    width: 0.42rem;
+    height: 0.4rem;
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+    background-size: auto 0.6rem;
+    margin-right: 0.08rem;
+    background-position: -2.5rem -0.08rem;
+    display: inline-block;
+    line-height: 0.56rem;
+  }
+  .NIE-copyRight_m {
+    padding: 0.42rem 0.32rem;
+    min-height: 0.8rem;
+    background: #0f0d1b;
+    margin-top: .56rem;
+    // border-top:1px solid #dadfe4;
+    p {
+      font-size: 0.26rem;
+      line-height: 0.4rem;
+      color: #a7acb0;
+    }
+    a {
+      color: #a7acb0;
+      text-decoration: underline;
+    }
+  }
+}
+
+#NIE-share-m {
+  background: rgba(0, 0, 0, 0.7);
+  .NIE-share_buttons a i {
+    color: #fff;
+    //background: #f6b427;
+  }
+  .NIE-share_buttons a em {
+    color: #fff;
+  }
+  .NIE-share-guide {
+    line-height: 1.4;
+    p {
+      line-height: 1.4;
+    }
+  }
+}
+
+.btn-toTop {
+  width: 0.96rem;
+  height: 0.96rem;
+  display: block;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 0.3rem;
+  margin-left: -0.25rem;
+
+  .box();
+  .box-pack(center);
+  .box-align(center);
+  overflow: hidden;
+  border: 1px solid #a7acb0;
+  background: transparent;
+  i {
+    width: 0.3rem;
+    height: 0.3rem;
+    border-left: 0.08rem solid #100000;
+    border-top: 0.08rem solid #100000;
+    border-bottom: 0;
+    border-right: 0;
+    .transform(rotate(45deg));
+    display: block;
+    margin-top: 0.2rem;
+    border-color: #a7acb0;
+  }
+}
+
+.i_icon {
+  width: 0.3rem;
+  height: 0.3rem;
+  display: block;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+.i_arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  display: block;
+  position: relative;
+  .box();
+  .box-align(center);
+  .box-pack(center);
+  i {
+    width: 0.3rem;
+    height: 0.3rem;
+    border-right: 0.06rem solid #100000;
+    border-top: 0.06rem solid #100000;
+    border-bottom: 0;
+    border-left: 0;
+    .transform(rotate(45deg));
+    display: block;
+
+  }
+  &.i_arrow_left {
+    .rotate(-180deg);
+  }
+  &.i_arrow_top {
+    .rotate(-90deg);
+  }
+}
+
+#forhorview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  z-index: 9999999;
+  color: #FFF;
+  display: none;
+  p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -.2rem;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: .4rem;
+  }
+  &.on {
+    display: block;
+  }
+}
+
+#md_attention {
+  .pop-code {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 1rem;
+    width: 2rem;
+  }
+  .attention {
+    position: fixed;
+    bottom: 0.8rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.8rem;
+    height: 1rem;
+    .box();
+    .box-orient(horizontal);
+    .box-align(center);
+    background: transparent;
+    /*这里是公众号放二维码的样式*/
+    /*  position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 4rem;
+      height: 4rem;
+      margin: -2rem 0 0 -2rem;
+      img{
+        margin: 0 auto .2rem;
+        width: 3rem;
+        display: block;
+      }
+      p{
+        text-align: center;
+        color: #fff;
+      }*/
+    i {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 1rem;
+      margin-right: .1rem;
+      color: #fff;
+      background: #1583e4;
+    }
+    em {
+      .box-flex(1);
+      display: block;
+      font-size: 0.24rem;
+      color: #fff;
+      font-style: normal;
+    }
+  }
+}
+
+.setplaceholder(@cl,@fs) {
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: @cl;
+    font-size: @fs;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: @cl;
+    font-size: @fs;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: @cl;
+    font-size: @fs;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: @cl;
+    font-size: @fs;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+//有下划线并且有icon图标
+.underline() {
+  display: inline-block;
+  padding-right: .2rem;
+  position: relative;
+  color: #2c2525;
+  border-bottom: 1px solid #453c3c;
+  font-size: .24rem;
+  &:before {
+    content: '';
+    position: absolute;
+    top: .06rem;
+    right: 0;
+    display: inline-block;
+    width: .2rem;
+    height: .21rem;
+    background: url(../img/arrow.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.absc() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.autocenter(@w,@h) {
+  .absc();
+  width: @w;
+  height: @h;
+  margin: (-@h/2) 0 0 (-@w/2);
+}
+
+.inmid() {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.intop() {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.home-arrow {
+  .keyframes(home_arrow,
+  { 0%, 100% {
+    opacity: 1;
+    .translate(0, -.3rem);
+  } 50% {
+      opacity: .7;
+      .translate(0, 0);
+    } }
+  );
+}
